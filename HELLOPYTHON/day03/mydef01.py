@@ -1,0 +1,22 @@
+def add( a,b ):
+    return a + b
+
+def minus( a,b ):
+    return a - b
+
+def divide( a,b ):
+    return a / b
+
+def multiply( a,b ):
+    return a * b
+
+sum = add( 5,6 )
+min = minus( 5,6 )
+div = divide( 5,6 )
+mul = multiply( 5,6 )
+
+
+print( f'sum : { sum }' )
+print( f'min : { min }' )
+print( f'div : { div }' )
+print( f'mul : { mul }' )
