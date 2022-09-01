@@ -19,7 +19,10 @@ class Academy:
         self.cnt_student += 20
     
 
-a = Academy()
-a.openClass()
-print( a )
+if __name__ == '__main__':
+    
+    a = Academy()
+    a.openClass()
+    print( a )
+
     
