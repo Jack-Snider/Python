@@ -20,8 +20,8 @@ class App(QMainWindow, form_class):
         last = int( self.le_last.text() )
         
         for i in range( first, last + 1 ):
-            for j in range( 1, i + 1 ):
-                print( '*' , end = '')
+            for _ in range( 1, i + 1 ):
+                print( '*' , end = '' )
                 answer += '*'
         
             print()
