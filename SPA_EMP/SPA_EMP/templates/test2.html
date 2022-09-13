@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TEST2</title>
+		
+		<script type="text/javascript">
+	
+			function myclick(){
+					
+				var obj = document.querySelector( "#it" );
+				var a = obj.value();
+				
+				
+				var num = parseInt( a );
+				num = num * 2;
+				
+				alert( a );
+				obj.value = num;
+				
+			}
+			
+		
+		</script>
+		
+	</head>
+	<body>
+		<h2>I AM JACK SNIDER</h2>
+		
+		<input type="text" id="it" value="100">
+		<a href="javascript:myclick()" >double</a>
+		
+	</body>
+</html>

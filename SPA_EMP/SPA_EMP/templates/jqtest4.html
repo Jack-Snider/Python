@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		<title>TEST2</title>
+		
+	</head>
+	<body>
+	
+		<table border = "1px">
+			
+			<tr>
+				<td>첫별수</td>
+				<td>
+					<input type = "text" id = "it_first">
+				</td>
+			</tr>
+			
+			<tr>
+				<td>끝별수</td>
+				<td>
+					<input type = "text" id = "it_last">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan = "2">
+					<input id = "draw" type = "button" value = "별그리기">
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan = "2">
+					<textarea id = "ta" rows = 20 cols = ""></textarea>
+				</td>
+			</tr>
+			
+		</table>
+		
+		<script type="text/javascript">
+		
+		$( function(){
+			
+			$( "draw" ).on( "click", function(){
+				
+				alert( "you clicked me!" );
+				
+				var start = $( "#it_first" );
+				var last = $( "#it_last" );
+				
+				var s = parseInt( start );
+				var e = parseInt( last );
+				
+				var result = "";
+				
+				for( var i = s; i <= e; i++ ){
+					for( var j = 1; j <= i; j++ ){
+						result += "*";
+					}
+					result += "\n";
+				}
+							
+				var ta = $( "%ta" );
+				ta.innerHTML = result;
+				
+			} );
+			
+		} );
+		
+		</script>
+		
+	</body>
+</html>

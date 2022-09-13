@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from HELLODJANGO import daoemp
+from HELLODJANGO.daoemp import DaoEmp
 import pymysql
 
 # Create your views here.
@@ -20,24 +22,56 @@ def myparam( request ):
 
 def db( request ):
     
-    con = pymysql.connect(
-            host="localhost",
-            user="root",
-            password="python",
-            db = 'python',
-            charset="utf8",
-            port = 3305 )
+    de = DaoEmp()
+    list = de.mylist()
     
-    # 파이썬에서 커서는 자바에서의 Statement 역할을 한다.
-    cur = con.cursor()
+    txt =""
+    
+    for e in list:
+        e_id=e['e_id']
+        e_name=e['e_name']
+        sex=e['sex']
+        addr=e['addr']
+        
+        txt +="{},{},{},{}<br/>".format(e['e_id'],e['e_name'],e['sex'],e['addr'])
+        
+    return HttpResponse( txt )
 
-    sql = 'SELECT * FROM emp'
-    cur.execute( sql )
-    rows = cur.fetchall()
+
+def forward( request ):
+    a = '홍길동'
+    b = [ '전우치','신사임당','대장금' ]
+    
+   
+    
+    mylist = [
+        
+        { 'e_id' : '1',' e_name':'1', 'sex':'1' , 'addr':'1' },
+        { 'e_id' : '2',' e_name':'2', 'sex':'2' , 'addr':'2' },
+        { 'e_id' : '3',' e_name':'3', 'sex':'3' , 'addr':'3' }
+        ]
+    
+    data = {
+        'a' : a,
+        'b' : b,
+        'data': mylist,
+        }
+    
+    # 장고에는 forward == redner
+    return render( request, 'emp.html' , data)
+
+def emp( request ):
+    de = daoemp()
+    lst = de.mylist()
+    
+    data = {
+        'list':lst
+    }
+    
+    return render( request, 'emp.html' , data)
     
 
-    cur.close()
-    con.close()
+
     
-    return HttpResponse( f'{ rows }' )
     
+   

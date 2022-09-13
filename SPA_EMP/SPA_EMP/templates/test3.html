@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TEST2</title>
+		
+		<script type="text/javascript">
+			
+			function myclick(){
+				
+				var num = Math.floor( Math.random() * 45 );
+				
+				var numbers = document.getElementsByClassName( "mytd" );
+				
+				var step;
+				for( step = 0; step < numbers.length; step += 1 ){
+					numbers[ step ].innerHTML = Math.floor( Math.random() * 45 ) + 1;
+				}
+				
+				
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+	
+		<table>
+			<tr>
+				<td class = "mytd">__</td>
+				<td class = "mytd">__</td>
+				<td class = "mytd">__</td>
+				<td class = "mytd">__</td>
+				<td class = "mytd">__</td>
+				<td class = "mytd">__</td>
+			</tr>
+			<tr>
+				<td>
+					<input type = "button" value = "로또생성하기" onclick = "myclick()">
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>
