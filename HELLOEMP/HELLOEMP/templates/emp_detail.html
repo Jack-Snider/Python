@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ emp.e_id }} DETAIL</title>
+		
+		<script type="text/javascript">
+			
+		
+			function fn_mod(){
+				var e_id = '{{ emp.e_id }}';
+				location.href = 'emp_mod?e_id=' + e_id;
+			}
+			
+			function fn_del(){
+				
+				
+				var frn = document.getElementsByName( "frn" )[ 0 ];
+				frn.submit();
+				
+			}
+			
+		
+		</script>
+		
+	</head>
+	<body>
+	
+		<form id = "frn" method = "post" action = "emp_del_act" name  = "frn" style = "width : 300px">
+			<input type = "hidden" name = "e_id" value = "{{ emp.e_id }}">
+		</form>
+	
+		<table border="1px" style="width: 300px">
+			<tr>
+				<td>사번</td>
+				<td>{{ emp.e_id }}</td>
+			</tr>
+	
+			<tr>
+				<td>이름</td>
+				<td>{{ emp.e_name }}</td>
+			</tr>
+	
+			<tr>
+				<td>성별</td>
+				<td>{{ emp.sex }}</td>
+			</tr>
+	
+			<tr>
+				<td>주소</td>
+				<td>{{ emp.addr }}</td>
+			</tr>
+	
+			<tr>
+				<td colspan = "2">
+					<input type = "button" value = "수정" onClick = "fn_mod()">
+					<input type = "button" value = "삭제" onClick = "fn_del()">
+				</td>
+			</tr>
+	
+		</table>
+	
+	
+	</body>
+</html>

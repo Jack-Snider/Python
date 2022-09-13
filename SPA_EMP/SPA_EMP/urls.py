@@ -1,4 +1,4 @@
-"""HELLODJANGO URL Configuration
+"""SPA_EMP URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -14,22 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-import myapp.views
-from myapp import views
-from HELLODJANGO import views
- 
-
+from django.urls import path
+from SPA_EMP import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    
-    #path( 'hello/', myapp.views.hello, name = 'hello')
-    #path( 'hello/', views.hello )
-    path( 'param/', views.myparam ),
-    path( 'db/', views.db ),
-    #path( 'forward/', views.forward )
-    path( 'emp/', views.forward )
-    
-    
+    #path('admin/', admin.site.urls),
+    path( '', views.emp ),
+    path( 'emp', views.emp_list_ajax ),
+    path( 'test2', views.test2 ),
+    path( 'test3', views.test3 ),
+    path( 'test4', views.test4 ),
+    path( 'emp_detail_ajax', views.emp_detail_ajax ),
+    path( 'emp_insert_ajax', views.emp_insert_ajax ),
+    #path( 'emp_delete_ajax', views.emp_delete_ajax ),
+    #path( 'emp_list_ajax', views.emp_list_ajax ),
 ]

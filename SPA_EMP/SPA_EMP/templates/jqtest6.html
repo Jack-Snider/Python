@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST2</title>
+
+<script type="text/javascript">
+
+	$(function() {
+
+		$( "#btn_add" ).on( "click", function(){
+			
+			$.ajax({
+				type : "GET",
+				url : "",
+				dataType : "JSON", 
+				success : function( data ){
+					
+				}
+				
+			});
+			
+		} );
+
+	})
+	
+	
+</script>
+
+</head>
+<body>
+
+	<h1>TEST 6</h1>
+
+	<table border = "1px">
+		<thead>
+			<tr>
+				<td>사번</td>
+				<td>이름</td>
+				<td>성별</td>
+				<td>주소</td>
+			</tr>
+		</thead>
+		<tbody id = "mybody">
+			<tr>
+				<td colspan = "4">해당하는 데이터가 없습니다.</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table border = "1px">
+		<tr>
+			<td>사번</td>
+			<td>
+				<input type = "text" id = "e_id">
+			</td>
+		</tr>
+				
+		<tr>	
+			<td>이름</td>
+			<td>
+				<input type = "text" id = "e_name">
+			</td>
+		</tr>	
+		
+		<tr>
+			<td>성별</td>
+			<td>
+				<input type = "text" id = "sex">
+			</td>
+		</tr>			
+			
+		<tr>
+			<td>주소</td>
+			<td>
+				<input type = "text" id = "addr">
+			</td>
+		</tr>			
+		
+		<tr>
+			<td colspan = "2">
+				<input type = "button" id = "btn_add" value = "추가">
+				<input type = "button" id = "btn_update" value = "수정">
+				<input type = "button" id = "btn_update" value = "삭제">
+			</td>
+		</tr>
+		
+	</table>
+
+</body>
+</html>

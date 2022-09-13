@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ADD info</title>
+		
+		<script type="text/javascript">
+		
+			var cnt =  parseInt( '{{ cnt }}' );
+			if( cnt == 1 ){
+				alert( "정상적으로 삭제되었습니다." );
+				location.href = "emp_list";
+			}else{
+				alert( "실행도중 문제가 발생하셨습니다." );
+				history.go( -1 );
+			}
+			
+		</script>
+
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TETRIS 02</title>
+		
+		<script type="text/javascript">
+		
+		/*
+		좌측 방향키 : 37
+
+		위쪽 방향키 : 38
+
+		우측 방향키 : 39
+
+		아래 방향키 : 40
+		*/
+		
+		/*
+			// 내 코드
+			window.addEventListener( "keydown", function( e ){
+				
+				let key = e.keyCode;
+				let ele = document.getElementById( "head" );
+				
+				if( key == 37 ){
+					ele.innerHTML = "←";
+				}else if( key == 38 ){
+					ele.innerHTML = "↑";
+				}else if( key == 39 ){
+					ele.innerHTML = "→";
+				}else if( key == 40 ){
+					ele.innerHTML = "↓";
+				}else{
+					ele.innerHTML = "키가 눌렸군요.";
+				}
+				
+			} );
+		
+		*/
+		
+		// 선생님 코드
+		window.addEventListener( "keydown", ( e ) =>{
+			console.log( e.code, e.code, e.code );
+		} );
+		
+		</script>
+		
+	</head>
+	<body>
+		<h1 id = "head"></h1>
+	</body>
+</html>

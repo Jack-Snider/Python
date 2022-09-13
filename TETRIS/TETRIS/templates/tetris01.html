@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TETRIS 01</title>
+		
+		<style type="text/css">
+			td {
+				width : 20px;
+				height : 20px;
+				
+			}
+		</style>
+		
+		
+		<script type="text/javascript">
+		
+			// 블록의 위치
+			var i = 4;
+			var j = 3;
+			
+			function myrender(){
+				var tds = document.querySelectorAll( "td" );
+				console.log( tds );
+				
+				// table은 1차원 배열이다. ( i는 10의 자리, j는 1의 자리 )
+				tds[ ( i * 10 ) + j ].style.backgroundColor = "red";
+			}
+			
+		</script>
+		
+	</head>
+	<body onload = "myrender()">
+		
+		<!-- 10 * 25 테이블 -->
+		<table border = "1px">
+		
+			<!-- tr하나에 10개 td -->
+			
+			<!-- tr 개수 : 5 / 25 -->
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			
+			
+	
+			<!-- tr 개수 : 10 / 25 -->
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+		
+			
+			
+			<!-- tr 개수 : 15 / 25 -->
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			
+			
+			<!-- tr 개수 : 20 / 25 -->
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			
+			
+			<!-- tr 개수 : 25 / 25 -->
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			<tr>
+				<td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			
+			
+			
+		</table>
+		
+		
+	</body>
+</html>
